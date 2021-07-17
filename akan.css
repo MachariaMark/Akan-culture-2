@@ -24,4 +24,15 @@ body {
   position: relative;
   border-radius: 4px;
 }
-  
+#bgcolor {
+  background-color: black;
+  color: white;
+}
+.form {
+  border-style: outset;
+  background: #000;
+  text-align: center;
+  color: aquamarine;
+  box-sizing: border-box;
+  padding: 10px;  
+}

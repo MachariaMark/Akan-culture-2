@@ -43,4 +43,19 @@ body {
   padding-left: 300px;
   padding-bottom: 540px; 
 }
-  
+#bgimage2 {
+  padding-right:90px;
+  padding-left: 450px;
+  padding-top: 100px;
+  padding-bottom: 110px;
+  background-image: url(twokids.jpeg);
+  background-size: contain;;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 4px;
+}
+.result {
+  color: aquamarine;
+  font-size: 30px;
+  margin-top: 20px;
+}  

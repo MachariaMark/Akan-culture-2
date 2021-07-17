@@ -85,13 +85,27 @@
   </div>
   <br>
   <br>
-
-
-
-
-
-
-
+  <div id="bgimage2">
+    <div class="pad">
+      <div class="form" id="calculate">
+        <form class="form" id="resetform" method="post">
+          <h3>When is your birthday?</h3><br>
+          <input type="text" name="day" value="" id="day" placeholder="date.." class="form" required>
+          <input type="text" name="month" value="" id="month" placeholder="month.." class="form" required>
+          <input type="text" name="year" value="" id="year" placeholder="year.." class="form" required><br><br>
+          <h3>Gender</h3>           
+          <label>male</label>           
+          <input type="radio" name="gender" value="male" id="male" required><br>
+          <label>female</label>           
+          <input  type="radio" name="gender" value="female" id="female" required><br><br>
+          <button type="button" class="btn text-white bg-dark mb-3" onclick="getValue()" name="button">submit</button>
+          <br>
+          <h5 id="result" class="result"></h5>
+        </form>
+      </div>
+    </div>
+  </div>
+  <p class="text-center">&copy;Mark Muchiri Macharia.</p>
 </body>
 
 </html>

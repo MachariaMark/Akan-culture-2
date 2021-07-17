@@ -8,5 +8,20 @@ body {
 }
 #white {
   color: white;
-  }
+}
+#top {
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+.bgimage1 {
+  padding: 100px;
+  background-image: url(yellowbg.jpeg);
+  background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 4px;
+}
   

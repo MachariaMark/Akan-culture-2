@@ -1,82 +1,119 @@
-function getValue()
-{
-  console.log("working")
-  var day = document.getElementById("day").value;
-  var month = document.getElementById("month").value;
-  var year = document.getElementById("year").value;
-  var male = document.getElementById("male").checked;
-  var female = document.getElementById("female").checked;
-  if (day == ""){
-    alert("enter valid day");
-    return false;
-  }else if(day<0 || day>31){
-    alert("enter valid day");
-     console.log(day);
-     return false;
-  }else if (day==null){
-      alert("enter valid day");
-      return false;
-  }if(month<0){
-    alert("enter valid month");
-    return false;
-  }else if (month>12) {
-    alert("enter valid month");
-    return false;
-  }else if (month==null) {
-    alert("enter valid month");
-    return false;
-  }else if (month=="") {
-    alert("enter valid month");
-    return false;
-    console.log(month);
-  } if(year<1940 ){
-    alert("enter valid year");
-    return false;
-  } if (male!==true && female!==true){
-    alert("oops! select gender");
-    return false;
-  }
+//General Array Function
+function MakeArray(n) {
+    this.length = n;
+    for (var i = 1; i <=n; i++) {
+      this[i] = 0;
+    }
+ }
+ //Initialize Days of Week Array
+days = new MakeArray(7);
+days[0] = "Saturday"
+days[1] = "Sunday"
+days[2] = "Monday"
+days[3] = "Tuesday"
+days[4] = "Wednesday"
+days[5] = "Thursday"
+days[6] = "Friday"
 
-  var century =year.slice(0,2);
-  // formula for day of birth
-  var birthday = Math.floor(( ( (century/4) -2*century-1) + ((5*year/4) ) + ((26*(month+1)/10)) + day )% 7);
-  console.log(birthday);
-  // names values
-  var maleNames=["Sunday ~ Kwasi","Monday ~ Kwadwo","Tuesday ~ Kwabena","Wednesday ~ Kwaku","Thursday ~  Yaw",
-  "Friday ~ Kofi","Saturday ~ Kwame"];
-  var femaleNames=["Sunday ~ Akosua","Monday ~ Adwoa", "Tuesday ~ Abenaa", "Wednesday ~ Akua", "Thursday ~  Yaa",
-  "Friday ~ Afua", "Saturday ~ Ama"];
-  // outputs male values
-  if( birthday==0 && male==true) {
-    document.getElementById("result").innerHTML="YOUR AKAN NAME ~ "+ maleNames[0];
-  }else if( birthday==1 && male==true) {
-    document.getElementById("result").innerHTML="YOUR AKAN NAME ~ "+ maleNames[1];
-  }else if( birthday==2 && male==true) {
-    document.getElementById("result").innerHTML="YOUR AKAN NAME ~ "+ maleNames[2];
-  }else if( birthday==3 && male==true) {
-    document.getElementById("result").innerHTML="YOUR AKAN NAME ~ "+ maleNames[3];
-  }else if( birthday==4 && male==true) {
-    document.getElementById("result").innerHTML="YOUR AKAN NAME ~ "+ maleNames[4];
-  }else if( birthday==5 && male==true) {
-    document.getElementById("result").innerHTML="YOUR AKAN NAME ~ "+ maleNames[5];
-  }else if( birthday==6 && male==true) {
-    document.getElementById("result").innerHTML="YOUR AKAN NAME ~ "+ maleNames[6];
-  }
-  // outputs female values
-  if( birthday==0 && female==true) {
-    document.getElementById("result").innerHTML="YOUR AKAN NAME ~ "+ femaleNames[0];
-  }else if( birthday==1 && female==true) {
-    document.getElementById("result").innerHTML="YOUR AKAN NAME ~ "+ femaleNames[1];
-  }else if( birthday==2 && female==true) {
-    document.getElementById("result").innerHTML="YOUR AKAN NAME ~ "+ femaleNames[2];
-  }else if( birthday==3 && female==true) {
-    document.getElementById("result").innerHTML="YOUR AKAN NAME ~ "+ femaleNames[3];
-  }else if( birthday==4 && female==true) {
-    document.getElementById("result").innerHTML="YOUR AKAN NAME ~ "+ femaleNames[4];
-  }else if( birthday==5 && female==true) {
-    document.getElementById("result").innerHTML="YOUR AKAN NAME ~ "+ femaleNames[5];
-  }else if( birthday==6 && female==true) {
-    document.getElementById("result").innerHTML="YOUR AKAN NAME ~ "+ femaleNames[6];
-  }
-  document.getElementById("resetform").reset();
-}
+//Initialize Months Array
+months = new MakeArray(12);
+months[1] = "January" 
+months[2] = "February" 
+months[3] = "March" 
+months[4] = "April" 
+months[5] = "May" 
+months[6] = "June" 
+months[7] = "July" 
+months[8] = "August"
+months[9] = "September" 
+months[10] = "October"
+months[11] = "November"
+months[12] = "December"
+
+//Akan names Array
+maleakannames = new MakeArray(7);
+maleakannames[0]= "kwame"
+maleakannames[1]= "kwasi"
+maleakannames[2]= "kwadwo"
+maleakannames[3]= "kwabena"
+maleakannames[4]= "kwaku"
+maleakannames[5]= "yaw"
+maleakannames[6]= "kofi"
+
+//Akan names Array
+femaleakannames = new MakeArray(7);
+femaleakannames[0]= "Ama"
+femaleakannames[1]= "Akosua"
+femaleakannames[2]= "Adwoa"
+femaleakannames[3]= "Abenaa"
+femaleakannames[4]= "Akua"
+femaleakannames[5]= "Yaa"
+femaleakannames[6]= "Afua"
+
+
+//Day of Week Function
+function malecompute(form) {
+    var val1 = parseInt(form.day.value, 10)
+    if ((val1 < 0) || (val1 > 31)) {
+       alert("Day is out of range")
+    }
+    var val2 = parseInt(form.month.value, 10)
+    if ((val2 < 0) || (val2 > 12)) {
+       alert("Month is out of range")
+    }  
+    var val2x = parseInt(form.month.value, 10)
+    var val3 = parseInt(form.year.value, 10)
+    if (val3 < 1900) {
+       alert("You're quite old!")
+    }
+    if (val2 == 1) {
+       val2x = 13;
+       val3 = val3-1
+    }
+    if (val2 == 2) {
+       val2x = 14;
+       val3 = val3-1
+    }
+    var val4 = parseInt(((val2x+1)*3)/5, 10)
+    var val5 = parseInt(val3/4, 10)
+    var val6 = parseInt(val3/100, 10)
+    var val7 = parseInt(val3/400, 10)
+    var val8 = val1+(val2x*2)+val4+val3+val5-val6+val7+2
+    var val9 = parseInt(val8/7, 10)
+    var val0 = val8-(val9*7)
+    form.result1.value = months[val2]+" "+form.day.value +", "+form.year.value
+    form.result2.value = maleakannames[val0]
+ }
+ 
+ function femalecompute(form) {
+    var val1 = parseInt(form.day.value, 10)
+    if ((val1 < 0) || (val1 > 31)) {
+       alert("Day is out of range")
+    }
+    var val2 = parseInt(form.month.value, 10)
+    if ((val2 < 0) || (val2 > 12)) {
+       alert("Month is out of range")
+    }  
+    var val2x = parseInt(form.month.value, 10)
+    var val3 = parseInt(form.year.value, 10)
+    if (val3 < 1900) {
+       alert("You're that old!")
+    }
+    if (val2 == 1) {
+       val2x = 13;
+       val3 = val3-1
+    }
+    if (val2 == 2) {
+       val2x = 14;
+       val3 = val3-1
+    }
+    var val4 = parseInt(((val2x+1)*3)/5, 10)
+    var val5 = parseInt(val3/4, 10)
+    var val6 = parseInt(val3/100, 10)
+    var val7 = parseInt(val3/400, 10)
+    var val8 = val1+(val2x*2)+val4+val3+val5-val6+val7+2
+    var val9 = parseInt(val8/7, 10)
+    var val0 = val8-(val9*7)
+    form.result1.value = months[val2]+" "+form.day.value +", "+form.year.value
+    form.result2.value = femaleakannames [val0]
+  } 

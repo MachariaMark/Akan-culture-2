@@ -1,111 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Ghanian Project</title>
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-  <link href="akan.css" rel="stylesheet" type="text/css">
-  <script src="akan.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>akan culture</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <div class="bgimage1">
-    <div class="container" id="top">
-      <div class="card" id="bgcolor">
-        <div class="jumbotron-fluid">
-          <h1 class="display-4">Ghanian Birthday Name.</h1>
-          <p>This is a web application that takes a user's birthday and calculates the day of the week they were
-            born.<br>Then depending on their gender outputs their Akan Name. Akan names are derived from Ghanian
-            culture.<br>Frequently in Ghana, children are given their first name as a 'day name' which corresponds to
-            the day in theweek they were born.
-          </p>
+    <script src="Akan.js"></script>
+    <div class="Akua">
+        <div class="box"> 
+            <div class="boxtext">
+                <h1>Ghanian Birthday Name.</h1>
+                <p>This is a web application that takes a user's birthday and calculates the day of the week they were born.<br>
+                   Then depending on their gender outputs their Akan Name.<br>
+                   Akan names are derived from Ghanian culture.<br>
+                   Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born.<br> 
+                   Here are Ghanian day names:  
+                </p>
+            </div>
+            <div class="boxtext">
+                <ul>
+                   <b>Male</b>
+                   <li>Sunday: Kwasi</li>
+                   <li>Monday: Kwadwo</li>
+                   <li>Tuesday: Kwabena</li>
+                   <li>Wednesday: Kwaku</li>
+                   <li>Thursday:  Yaw</li>
+                   <li>Friday: Kofi</li>
+                   <li>Saturday: Kwame</li>
+                </ul>
+                <ul>
+                   <b>Female</b>
+                   <li>Sunday: Akosua</li>
+                   <li>Monday: Adwoa</li>
+                   <li>Tuesday: Abenaa</li>
+                   <li>Wednesday: Akua</li>
+                   <li>Thursday:  Yaa</li>
+                   <li>Friday: Afua</li>
+                   <li>Saturday: Ama</li>
+                </ul>
+            </div>
+            <div class="boxtext">
+                <p>Most people do know when their birthdays are, but some might not know what day of the week they were born.<br>
+                   Luckily for us, there are ways to calculate the day of the week from a specific date.
+                </p>
+            </div>
         </div>
-      </div>
+    
     </div>
-
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container" id="white">
-        <h3>Here are Ghanian day names:</h3>
-        <div class="row">
-          <div class="col-4">
-            <div class="card" id="bgcolor" style="width: 18rem;">
-              <div class="card-header">
-                <b>Male</b>
-              </div>
-              <ul class="list-group list-group-flush" id="bgcolor">
-                <li class="list-group-item" id="bgcolor">Sunday: Kwasi</li>
-                <li class="list-group-item" id="bgcolor">Monday: Kwadwo</li>
-                <li class="list-group-item" id="bgcolor">Tuesday: Kwabena</li>
-                <li class="list-group-item" id="bgcolor">Wednesday: Kwaku</li>
-                <li class="list-group-item" id="bgcolor">Thursday: Yaw</li>
-                <li class="list-group-item" id="bgcolor">Friday: Kofi</li>
-                <li class="list-group-item" id="bgcolor">Saturday: Kwame</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-4"></div>
-          <div class="col-4">
-            <div class="card" id="bgcolor" style="width: 18rem;">
-              <div class="card-header" id="bgcolor">
-                <b>Female</b>
-              </div>
-              <ul class="list-group list-group-flush" id="bgcolor">
-                <li class="list-group-item" id="bgcolor">Sunday: Akosua</li>
-                <li class="list-group-item" id="bgcolor">Monday: Adwoa</li>
-                <li class="list-group-item" id="bgcolor">Tuesday: Abenaa</li>
-                <li class="list-group-item" id="bgcolor">Wednesday: Akua</li>
-                <li class="list-group-item" id="bgcolor">Thursday: Yaa</li>
-                <li class="list-group-item" id="bgcolor">Friday: Afua</li>
-                <li class="list-group-item" id="bgcolor">Saturday: Ama</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <br>
-        <div class="card text-center" id="bgcolor">
-          <h5 class="card-header">FIND YOUR AKAN NAME ?</h5>
-          <div class="card-body">
-            <h7 class="card-text">
-              Most people do know when their birthdays are,
-              but some might not know what day of the week they were born.<br>
-              Luckily for us, there are ways to calculate the day of the week from a specific date.
-            </h7>
+    <div class="Adinkra">
+    <div class="form">
+        <img src="gflag.jpeg" class="flag">    
+        <h2 id="1">FIND YOUR AKAN NAME ?<h2>
+        <form>
+            <table class="td">
+                <tr>
+                   <th>DAY:</th>
+                </tr>
+                <tr>        
+                   <td><input type="text" name="day" id="day" placeholder="DD" size="2"></td>
+                </tr>
+                <tr>
+                    <th>MONTH:</th>
+                </tr>
+                <tr>
+                   <td><input type="text" name="month" id="month" placeholder="MM" size="2"></td>
+                </tr>
+                <tr>
+                    <th>YEAR:</th>
+                </tr>
+                <tr>
+                   <td><input type="text" name="year" id="year" placeholder="YYYY" size="4"></td>
+                </tr>
+                <tr>
+                    <td><input type="reset" value="clear"></td>
+                </tr>
+            </table>
             <br>
-            <br>
-            <div class="active text-center">
-              <a href="#calculate" class="btn text-white bg-dark mb-3">Calculate Now!</a>
-            </div>
-          </div>
-        </div>
-      </div>
+            <p>GENDER:</p>
+            <input type="radio" name="gender" value="male" onclick="malecompute(this.form)">Male<br>
+            <input type="radio" name="gender" value="female" onclick="emalecompute(this.form)">Female<br><br>
+            <table class="td">
+                <tr>
+                  <th>DATE OF BIRTH:</th>
+                </tr>
+                <tr>
+                  <th><input type="text" name="result1" size="20"></th>
+                </tr>
+                <tr>
+                  <th>YOUR AKAN NAME:</th>
+                </tr>
+                <tr>
+                 <th><input type="text" name="result2" size="20"></th>
+                </tr>
+            </table>              
+        </form>   
     </div>
-  </div>
-  <br>
-  <br>
-  <div id="bgimage2">
-    <div class="pad">
-      <div class="form" id="calculate">
-        <form class="form" id="resetform" method="post">
-          <h3>When is your birthday?</h3><br>
-          <input type="text" name="day" value="" id="day" placeholder="date.." class="form" required>
-          <input type="text" name="month" value="" id="month" placeholder="month.." class="form" required>
-          <input type="text" name="year" value="" id="year" placeholder="year.." class="form" required><br><br>
-          <h3>Gender</h3>           
-          <label>male</label>           
-          <input type="radio" name="gender" value="male" id="male" required><br>
-          <label>female</label>           
-          <input  type="radio" name="gender" value="female" id="female" required><br><br>
-          <button type="button" class="btn text-white bg-dark mb-3" onclick="getValue()" name="button">submit</button>
-          <br>
-          <h5 id="result" class="result"></h5>
-        </form>
-      </div>
-    </div>
-  </div>
-  <p class="text-center">&copy;Mark Muchiri Macharia.</p>
 </body>
-
 </html>
